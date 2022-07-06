@@ -29,6 +29,8 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#software">Software</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                 </ul>
             </div>
@@ -149,7 +151,7 @@
                             <i class="fab fa-python"></i>
                         </li>
                     </ul>
-                    
+
                     <h2 class="mb-5">Skills</h2>
                     <div class="subheading mb-3">Tools</div>
                     <ul class="list-inline dev-icons">
@@ -171,6 +173,9 @@
                         <li class="list-inline-item">
                             <span class="iconify" data-icon="cib:firebase" data-inline="true"></span>
                         </li>
+                        <li class="list-inline-item">
+                            <span class="iconify" data-icon="bi:lightning" data-inline="true"></span></span>
+                        </li>
                     </ul>
                     
                     <div class="subheading mb-3">Workflow</div>
@@ -191,15 +196,60 @@
                 </div>
             </section>
             <hr class="m-0" />
+            
+            <!-- Publications-->
+            <section class="resume-section" id="publications">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Publications</h2>
+                    <ul>
+                        <li> 
+                            <h4>Efficient Generation of Structured Objects with Constrained Adversarial Networks - 2020</h2>
+                            <p>
+                                Generative Adversarial Networks (GANs) struggle to generate structured objects like molecules and game maps. The issue is that structured objects must satisfy hard requirements (e.g., molecules must be chemically valid) that are difficult to acquire from examples alone. As a remedy, we propose Constrained Adversarial Networks (CANs), an extension of GANs in which the constraints are embedded into the model during training. This is achieved by penalizing the generator proportionally to the mass it allocates to invalid structures. In contrast to other generative models, CANs support efficient inference of valid structures (with high probability) and allows to turn on and off the learned constraints at inference time. CANs handle arbitrary logical constraints and leverage knowledge compilation techniques to efficiently evaluate the disagreement between the model and the constraints. Our setup is further extended to hybrid logical-neural constraints for capturing very complex constraints, like graph reachability. An extensive empirical analysis shows that CANs efficiently generate valid structures that are both high-quality and novel.
+                            </p>
+                            <a href="https://papers.nips.cc/paper/2020/file/a87c11b9100c608b7f8e98cfa316ff7b-Paper.pdf">https://papers.nips.cc/paper/2020/file/a87c11b9100c608b7f8e98cfa316ff7b-Paper.pdf</a>
+                            <p></p>
+                        </li>
+                        <li>
+                            <h4>Cross-Language Transformer Adaptation for Frequently Asked Questions - 2020</h4>
+                            <p>
+                                Transfer learning has been proven to be effective, especially when data for the target domain/task is scarce. Sometimes data for a similar task is only available in another language because it may be very specific. In this paper, we explore the use of machine-translated data to transfer models on a related domain. Specifically, we transfer models from the question duplication task (QDT) to similar FAQ selection tasks. The source domain is the well-known English Quora dataset, while the target domain is a collection of small Italian datasets for real case scenarios consisting of FAQ groups retrieved by pivoting on common answers. Our results show great improvements in the zero-shot learning setting and modest improvements using the standard transfer approach for direct in-domain adaptation.
+                            </p>
+                            <a href="http://ceur-ws.org/Vol-2769/paper_85.pdf">http://ceur-ws.org/Vol-2769/paper_85.pdf</a>
+                            <br>
+                            <p></p>
+                        </li>
+                    <ul>
+                </div>
+            </section>
+            
+            <!-- Software-->
+            <section class="resume-section" id="software">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Software</h2>
+                    <ul>
+                        <li> 
+                            <a href="https://github.com/iKernels/transformers-lightning">Transformers lightning</a>
+                        </li>
+                        <li> 
+                            <a href="https://github.com/iKernels/create-pretraining-datasets-nlp">Create Large NLP Datasets</a>
+                        </li>
+                        <li> 
+                            <a href="https://github.com/lucadiliello/semantic-loss-pytorch">Semantic Loss PyTorch</a>
+                        </li>
+                    <ul>
+                </div>
+            </section>
+
             <!-- Interests-->
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a reseacher, I enjoy most of my time being outdoors. I love and practive combat sports like Kick Boxing and Kali (Escrima) and I love also spend time with my Girlfriend.
+                    <p>Apart from being a reseacher, I enjoy most of my time being outdoors. I love and practice combat sports like Kick Boxing and Kali (Escrima) and I love also spend time with my girlfriend.
                         When forced indoors, I love reading and watching tv-series like Rick &amp; Morty, Dr. House and Game of Thrones.
                     </p>
                     <p>
-                        Incredibly, I've also got a girlfriend! Check out her blog <a href="https://chiaratellsmerano.it">here</a>.
+                        Incredibly, I've also got a girlfriend! Check out her blog <a href="https://chiaratellsmerano.ddns.net">here</a>.
                     </p>
                 </div>
             </section>
