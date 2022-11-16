@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/academicons.min.css"/>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
@@ -44,11 +45,23 @@
                     <h1 class="mb-0">Luca <span class="text-primary">Di Liello</span></h1>
                     <div class="subheading mb-5">Via Sommarive 9 · Trento, TN 38123 · <a href="mailto:name@email.com">luca.diliello@unitn.it</a></div>
                     <p class="lead mb-5">I'm a PhD student in Information and Communication Technology at the University of Trento, Italy, where I also received my MS in Computer Science. 
-                        I work mainly on large language models for natural language processing and information retrieval, but I am also interested in computer vision and constrained generative models.</p>
-                    <p><b>Interests:</b> Natural Language Processing, Pre-Training of Neural Language Models, Answer Sentence Selection, Question Answering, Generative models, Multilingual models.</p>
+                        I work mainly on large language models for natural language processing and Information Retrieval, but I am also interested in computer vision and constrained generative models.</p>
+                    <p><b>Interests:</b> Natural Language Processing, Pre-Training of Neural Language Models, Answer Sentence Selection, Question Answering, Generative models.</p>
                     <div class="social-icons">
+                        <a href="https://www.semanticscholar.org/author/Luca-Di-Liello/1576607908" style="padding: 25px" >
+                            <i class="ai ai-semantic-scholar-square ai-4x" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://scholar.google.com/citations?user=a21gywYAAAAJ&hl=it" style="padding: 25px" >
+                            <i class="ai ai-google-scholar-square ai-4x" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://arxiv.org/search/cs?searchtype=author&query=Di+Liello%2C+L" style="padding: 25px" >
+                            <i class="ai ai-arxiv-square ai-4x" aria-hidden="true"></i>
+                        </a>
+
                         <a href="https://www.linkedin.com/in/luca-di-liello-4b624092/" style="padding: 25px" >
-                            <i class="fab fa-linkedin-in fa-4x" aria-hidden="true"></i>
+                            <i class="fab fa-linkedin fa-4x" aria-hidden="true"></i>
                         </a>
                         
                         <a href="https://github.com/lucadiliello" style="padding: 25px">
@@ -221,6 +234,15 @@
                     <ul>
 
                         <li> 
+                            <h4>Effective Pre-Training Objectives for Transformer-based Autoencoders - 2022</h2>
+                            <p>
+                                In this paper, we study trade-offs between efficiency, cost and accuracy when pre-training Transformer encoders with different pre-training objectives. For this purpose, we analyze features of common objectives and combine them to create new effective pre-training approaches. Specifically, we designed light token generators based on a straightforward statistical approach, which can replace ELECTRA computationally heavy generators, thus highly reducing cost. Our experiments also show that (i) there are more efficient alternatives to BERT's MLM, and (ii) it is possible to efficiently pre-train Transformer-based models using lighter generators without a significant drop in performance.
+                            </p>
+                            <a href="https://arxiv.org/pdf/2210.13536.pdf">PDF</a>
+                            <p></p>
+                        </li>
+
+                        <li> 
                             <h4>TorchMetrics - Measuring Reproducibility in PyTorch - 2022</h2>
                             <p>
                                 A main problem with reproducing machine learning publications is the variance of metric implementations across papers. A lack of standardization leads to different behavior in mechanisms such as checkpointing, learning rate schedulers or early stopping, that will influence the reported results. For example, a complex metric such as Fréchet inception distance (FID) for synthetic image quality evaluation (Heusel et al., 2017) will differ based on the specific interpolation method used.
@@ -321,6 +343,7 @@
                 </div>
             </section>
         </div>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
