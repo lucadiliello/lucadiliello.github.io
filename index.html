@@ -45,7 +45,7 @@
                     <h1 class="mb-0">Luca <span class="text-primary">Di Liello</span></h1>
                     <div class="subheading mb-5">Via Sommarive 9 · Trento, TN 38123 · <a href="mailto:name@email.com">luca.diliello@unitn.it</a></div>
                     <p class="lead mb-5">I'm a PhD student in Information and Communication Technology at the University of Trento, Italy, where I also received my MS in Computer Science. 
-                        I work mainly on large language models for natural language processing and Information Retrieval, but I am also interested in computer vision and constrained generative models.</p>
+                        I work mainly on Large Language Models (LLMs) for Natural Language Processing (NLP) and Information Retrieval (IR), but I am also interested in Computer Vision (CV) and constrained generative models.</p>
                     <p><b>Interests:</b> Natural Language Processing, Pre-Training of Neural Language Models, Question Answering (Answer Sentence Selection) and Generative models.</p>
                     <div class="social-icons">
                         <a href="https://www.semanticscholar.org/author/Luca-Di-Liello/1576607908" style="padding: 25px" >
@@ -234,29 +234,11 @@
                     <ul>
 
                         <li> 
-                            <h4>Effective Pre-Training Objectives for Transformer-based Autoencoders - 2022</h2>
+                            <h4>Context-aware Transformer Pre-Training for Answer Sentence Selection - 2023</h2>
                             <p>
-                                In this paper, we study trade-offs between efficiency, cost and accuracy when pre-training Transformer encoders with different pre-training objectives. For this purpose, we analyze features of common objectives and combine them to create new effective pre-training approaches. Specifically, we designed light token generators based on a straightforward statistical approach, which can replace ELECTRA computationally heavy generators, thus highly reducing cost. Our experiments also show that (i) there are more efficient alternatives to BERT's MLM, and (ii) it is possible to efficiently pre-train Transformer-based models using lighter generators without a significant drop in performance.
+                                Answer Sentence Selection (AS2) is a core component for building an accurate Question Answering pipeline. AS2 models rank a set of candidate sentences based on how likely they answer a given question. The state of the art in AS2 exploits pre-trained transformers by transferring them on large annotated datasets, while using local contextual information around the candidate sentence. In this paper, we propose three pre-training objectives designed to mimic the downstream fine-tuning task of contextual AS2. This allows for specializing LMs when fine-tuning for contextual AS2. Our experiments on three public and two large-scale industrial datasets show that our pre-training approaches (applied to RoBERTa and ELECTRA) can improve baseline contextual AS2 accuracy by up to 8% on some datasets.
                             </p>
-                            <a href="https://arxiv.org/pdf/2210.13536.pdf">PDF</a>
-                            <p></p>
-                        </li>
-
-                        <li> 
-                            <h4>TorchMetrics - Measuring Reproducibility in PyTorch - 2022</h2>
-                            <p>
-                                A main problem with reproducing machine learning publications is the variance of metric implementations across papers. A lack of standardization leads to different behavior in mechanisms such as checkpointing, learning rate schedulers or early stopping, that will influence the reported results. For example, a complex metric such as Fréchet inception distance (FID) for synthetic image quality evaluation (Heusel et al., 2017) will differ based on the specific interpolation method used.
-                            </p>
-                            <a href="https://pdfs.semanticscholar.org/7d3a/54d96020e0772815e8c3aa9107b19f975318.pdf?_ga=2.256242699.1076624713.1657140434-432908749.1657140434">PDF</a>
-                            <p></p>
-                        </li>
-
-                        <li> 
-                            <h4>Paragraph-based Transformer Pre-training for Multi-Sentence Inference - 2022</h2>
-                            <p>
-                                Inference tasks such as answer sentence selection (AS2) or fact veriﬁcation are typically solved by ﬁne-tuning transformer-based models as individual sentence-pair classiﬁers. Recent studies show that these tasks beneﬁt from modeling dependencies across multiple candidate sentences jointly. In this paper, we ﬁrst show that popular pre-trained transformers perform poorly when used for ﬁne-tuning on multi-candidate inference tasks. We then propose a new pre-training objective that models the paragraph-level semantics across multiple input sentences. Our evaluation on three AS2 and one fact veriﬁcation datasets demonstrates the superiority of our pre-training technique over the traditional ones for transformers used as joint models for multi-candidate inference tasks, as well as when used as cross-encoders for sentence-pair formulations of these tasks.
-                            </p>
-                            <a href="https://arxiv.org/pdf/2205.01228.pdf">PDF</a>
+                            <a href="https://assets.amazon.science/05/0f/8bcfcdbd4784864bd131d73b6719/context-aware-transformer-pre-training-for-answer-sentence-selection.pdf">PDF</a>
                             <p></p>
                         </li>
 
@@ -265,7 +247,34 @@
                             <p>
                                 An important task for designing QA systems is answer sentence selection (AS2): selecting the sentence containing (or constituting) the answer to a question from a set of retrieved relevant documents. In this paper, we propose three novel sentence-level transformer pre-training objectives that incorporate paragraph-level semantics within and across documents, to improve the performance of transformers for AS2, and mitigate the requirement of large labeled datasets. Our experiments on three public and one industrial AS2 datasets demonstrate the empirical superiority of our pre-trained transformers over baseline models such as RoBERTa and ELECTRA for AS2.
                             </p>
-                            <a href="https://arxiv.org/pdf/2205.10455.pdf">PDF</a>
+                            <a href="https://aclanthology.org/2022.emnlp-main.810.pdf">PDF</a>
+                            <p></p>
+                        </li>
+
+                        <li> 
+                            <h4>Effective Pre-Training Objectives for Transformer-based Autoencoders - 2022</h2>
+                            <p>
+                                In this paper, we study trade-offs between efficiency, cost and accuracy when pre-training Transformer encoders with different pre-training objectives. For this purpose, we analyze features of common objectives and combine them to create new effective pre-training approaches. Specifically, we designed light token generators based on a straightforward statistical approach, which can replace ELECTRA computationally heavy generators, thus highly reducing cost. Our experiments also show that (i) there are more efficient alternatives to BERT's MLM, and (ii) it is possible to efficiently pre-train Transformer-based models using lighter generators without a significant drop in performance.
+                            </p>
+                            <a href="https://aclanthology.org/2022.findings-emnlp.405.pdf">PDF</a>
+                            <p></p>
+                        </li>
+
+                        <li> 
+                            <h4>TorchMetrics - Measuring Reproducibility in PyTorch - 2022</h2>
+                            <p>
+                                A main problem with reproducing machine learning publications is the variance of metric implementations across papers. A lack of standardization leads to different behavior in mechanisms such as checkpointing, learning rate schedulers or early stopping, that will influence the reported results. For example, a complex metric such as Fréchet inception distance (FID) for synthetic image quality evaluation (Heusel et al., 2017) will differ based on the specific interpolation method used.
+                            </p>
+                            <a href="https://www.theoj.org/joss-papers/joss.04101/10.21105.joss.04101.pdf">PDF</a>
+                            <p></p>
+                        </li>
+
+                        <li> 
+                            <h4>Paragraph-based Transformer Pre-training for Multi-Sentence Inference - 2022</h2>
+                            <p>
+                                Inference tasks such as answer sentence selection (AS2) or fact veriﬁcation are typically solved by ﬁne-tuning transformer-based models as individual sentence-pair classiﬁers. Recent studies show that these tasks beneﬁt from modeling dependencies across multiple candidate sentences jointly. In this paper, we ﬁrst show that popular pre-trained transformers perform poorly when used for ﬁne-tuning on multi-candidate inference tasks. We then propose a new pre-training objective that models the paragraph-level semantics across multiple input sentences. Our evaluation on three AS2 and one fact veriﬁcation datasets demonstrates the superiority of our pre-training technique over the traditional ones for transformers used as joint models for multi-candidate inference tasks, as well as when used as cross-encoders for sentence-pair formulations of these tasks.
+                            </p>
+                            <a href="https://aclanthology.org/2022.naacl-main.181.pdf">PDF</a>
                             <p></p>
                         </li>
 
@@ -301,21 +310,30 @@
                             <p>
                                 Generative Adversarial Networks (GANs) struggle to generate structured objects like molecules and game maps. The issue is that structured objects must satisfy hard requirements (e.g., molecules must be chemically valid) that are difficult to acquire from examples alone. As a remedy, we propose Constrained Adversarial Networks (CANs), an extension of GANs in which the constraints are embedded into the model during training. This is achieved by penalizing the generator proportionally to the mass it allocates to invalid structures. In contrast to other generative models, CANs support efficient inference of valid structures (with high probability) and allows to turn on and off the learned constraints at inference time. CANs handle arbitrary logical constraints and leverage knowledge compilation techniques to efficiently evaluate the disagreement between the model and the constraints. Our setup is further extended to hybrid logical-neural constraints for capturing very complex constraints, like graph reachability. An extensive empirical analysis shows that CANs efficiently generate valid structures that are both high-quality and novel.
                             </p>
-                            <a href="https://arxiv.org/pdf/2007.13197.pdf">PDF</a>
+                            <a href="https://proceedings.neurips.cc/paper/2020/file/a87c11b9100c608b7f8e98cfa316ff7b-Paper.pdf">PDF</a>
                             <p></p>
                         </li>
 
                     <ul>
                 </div>
             </section>
-            
+
             <!-- Software-->
             <section class="resume-section" id="software">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Software</h2>
                     <ul>
                         <li>
+                            <a href="https://github.com/lucadiliello/transformers-framework">Transformers Framework</a>
+                        </li>
+                        <li>
                             <a href="https://github.com/iKernels/transformers-lightning">Transformers Lightning</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lucadiliello/bleurt-pytorch">BLEURT-PyTorch</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lucadiliello/answer-selection">Answer Selection</a>
                         </li>
                         <li>
                             <a href="https://github.com/lucadiliello/mrqa-lightning">MRQA Lightning</a>
@@ -326,7 +344,6 @@
                         <li>
                             <a href="https://github.com/lucadiliello/jsonboard">JsonBoard</a>
                         </li>
-                        
                     <ul>
                 </div>
             </section>
