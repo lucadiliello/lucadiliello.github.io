@@ -1,0 +1,52 @@
+---
+import { siteConfig } from "../config";
+const hasBooks = siteConfig.books && siteConfig.books.length > 0;
+---
+
+{
+  hasBooks && (
+    <section id="books" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900">
+              Books
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {siteConfig.books.map((book) => (
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                    <div>
+                      <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                        <a href={book.link} target="_blank" rel="noopener noreferrer">{book.name}</a>
+                      </h3>
+                      <p
+                        class="text-base sm:text-lg"
+                        style={`color: ${siteConfig.accentColor}`}
+                      >
+                        Book: {book.book}
+                      </p>
+                     {book.series && (
+                        <p class="text-base sm:text-lg" style={`color: ${siteConfig.accentColor}`}>Series: {book.series}</p>
+                    )}
+                    </div>
+                  </div>
+                  <p class={`text-base sm:text-lg text-gray-600 leading-relaxed`}>
+                    {book.abstract}
+                  </p>    
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
