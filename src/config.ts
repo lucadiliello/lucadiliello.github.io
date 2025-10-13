@@ -11,7 +11,13 @@ export const siteConfig = {
     huggingface: "https://huggingface.co/lucadiliello",
   },
   aboutMe: "I'm an Applied Scientist II at Amazon AGI, where I develop large-scale information retrieval systems for RAG and pre-train and fine-tune multimodal language models (VLMs) for multimedia analysis and processing at scale. My work spans text, images, and videos, leveraging LLMs to extract insights from diverse data sources. I hold a PhD in Information and Communication Technology and an MS in Computer Science from the University of Trento, Italy. My research centers on Large Language Models for Natural Language Processing and Information Retrieval, with broad interests in Computer Vision, multimodal learning, and constrained generative models.",
-  skills: ["Python", "PyTorch", "TensorFlow", "JAX", "Keras", "Lightning", "vLLM", "HuggingFace", "AWS", "Docker", "Kubernetes"],
+  frameworks: [
+    "Python", "PyTorch", "TensorFlow", "JAX", "vLLM", "SGLang", "Docker", "Kubernetes"
+],
+  libraries: [
+    "Transformers", "Datasets", "Accelerate", "Lightning", "Torchmetrics", "Fabric", "DeepSpeed", "LangChain", "LangGraph", "LangFuse"
+  ],
+  platforms: ["AWS", "GCP"],
   experience: [
     {
       company: "Amazon AGI",
@@ -65,7 +71,7 @@ export const siteConfig = {
     {
       school: "University of Trento",
       degree: "Ph.D. Candidate in Information and Communication Technologies",
-      dateRange: "November 2019 – Present",
+      dateRange: "November 2019 – September 2023",
       achievements: [
         "Research focused on Natural Language Processing (NLP) and Information Retrieval (IR), with applications to large-scale multimodal and text-based retrieval systems.",
         "Developed and evaluated novel deep learning architectures for language understanding and retrieval efficiency.",
@@ -155,14 +161,14 @@ export const siteConfig = {
       description: "Transformers-Framework helps developers train and evaluate language models across diverse natural language processing tasks including masked language modeling, token detection, answer selection, machine reading, denoising, and summarization. We support various model architectures, from contextual models to ELECTRA-style generator-discriminator configurations, enabling flexible pipeline combinations. Built on PyTorch Lightning, the framework automatically handles multi-device and distributed training while maintaining dual checkpoint compatibility with both PyTorch Lightning (for training restoration) and Transformers (for model sharing)."
     },
     {
-      name: "Semantic Loss - PyTorch",
+      name: "Semantic Loss",
       link: "https://github.com/lucadiliello/semantic-loss-pytorch",
       description: "Create Semantic Loss equivalent circuits in PyTorch using SDDs for knowledge compilation."
     },
     {
-      name: "BLEURT - PyTorch",
+      name: "BLEURT ported to PyTorch",
       link: "https://github.com/lucadiliello/bleurt-pytorch",
-      description: "Porting of BLEURT models to HuggingFace Transformers."
+      description: "Porting of BLEURT models as HuggingFace Transformers compatible models."
     }
   ]
 };
